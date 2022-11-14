@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
+# Comandos de configuração executados durante o projeto do curso
+
+instalando recurso PWA `ng add @angular/pwa`
+
+para rodar o projeto é necessário fazer um `build`, pois não funciona em modo `ng serve`
+
+comando para executar o build `ng build --prod`
+
+acessamos a pasta DIST que recebeu nosso build e executamos o comando `npx serve`, assim ele executa o nosso projeto em um server local.
+
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -25,3 +38,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
