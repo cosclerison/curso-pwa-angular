@@ -13,8 +13,14 @@ comando para executar o build `ng build --prod`
 acessamos a pasta DIST que recebeu nosso build e executamos o comando `npx serve`, assim ele executa o nosso projeto em um server local.
 
 # API utilizada
+'https://www.carqueryapi.com/api/0.3/?callback=%3F&cmd=getMakes'
 
-https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbW5pR3NOajM5MFBKLU41cE9tRnFEN01wRFdSUXxBQ3Jtc0tsOG1qTUNZanZEOXlHck5neHpZRHkxMzB6OFFIN2E3WEJSX2pSblpMaGhDVFNENUVGdFlWcGMtZ1BkbXBWN3BSd2E4dGZWYllOUFUzMGFudmI3dzJDT1NObC1YTG52S3pPSERkTDBJNkJpdjJ1eGpiRQ&q=https%3A%2F%2Fwww.carqueryapi.com%2Fapi%2F0.3%2F%3Fcallback%3D%3F%26cmd%3DgetMakes&v=iskcf1UnVE0
+# Criando Servidor para cadastro dos dados - nodejs
+pasta node-seguros
+
+
+
+
 
 
 ## Development server
