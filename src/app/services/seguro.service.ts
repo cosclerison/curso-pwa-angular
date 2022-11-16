@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Seguro } from '../models/Seguro';
+import { OnlineOfflineService } from './online-offline.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,12 @@ export class SeguroService {
 
   constructor(
     private http: HttpClient,
-  ) { }
+    private onlineOfflineService: OnlineOfflineService
+  ) {
+    this.ouvirStatusConexao();
+  }
 
-  cadastrar(seguro: Seguro) {
+  private salvarAPI(seguro: Seguro) {
     this.http.post(this.API_SEGUROS + 'api/seguros', seguro)
     .subscribe(
       // primeiro parâmetro mostra o sucesso 
@@ -24,8 +28,27 @@ export class SeguroService {
     )
   }
 
+  cadastrar(seguro: Seguro) {
+    if(this.onlineOfflineService.isOnline) {
+      this.salvarAPI(seguro)
+    } else {
+      console.log("salvar seguro no banco local");
+    }
+  }
+
   listar(): Observable<Seguro[]> {
     return this.http.get<Seguro[]>(this.API_SEGUROS + 'api/seguros');
+  }
+
+  private ouvirStatusConexao() {
+    this.onlineOfflineService.statusConexao
+    .subscribe(online => {
+      if(online) {
+        console.log('Enviando dados do meu banco local para API');
+      } else {
+        console.log('Estou Off-Line');
+      }
+    })
   }
 }
 

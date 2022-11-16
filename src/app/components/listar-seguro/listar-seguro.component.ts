@@ -18,7 +18,6 @@ export class ListarSeguroComponent implements OnInit {
 
   ngOnInit(): void {
     this.seguros$ = this.seguroService.listar();
-    console.log(this.seguros$);
   }
 
 
