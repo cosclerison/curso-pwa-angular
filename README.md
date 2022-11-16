@@ -16,7 +16,9 @@ acessamos a pasta DIST que recebeu nosso build e executamos o comando `npx serve
 'https://www.carqueryapi.com/api/0.3/?callback=%3F&cmd=getMakes'
 
 # Criando Servidor para cadastro dos dados - nodejs
-pasta node-seguros
+acessa pasta "node-seguros" executa comando `ǹpm init -y` para configurar um novo arquivo packet.json limpo
+instala bibliotecas `npm i express`, `npm i body-parser`, `npm i core`
+ou tudo no mesmo comando `npm i express body-parser core`.
 
 
 
