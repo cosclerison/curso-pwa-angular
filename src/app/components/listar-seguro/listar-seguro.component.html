@@ -1,1 +1,33 @@
-<p>listar-seguro works!</p>
+<div class="ui card lista-seguros">
+  <div class="content">
+    <div class="header">Seguros</div>
+  </div>
+  <br />
+  <div class="content">
+    <ng-container *ngIf="seguros$ | async as seguros; else carregando">
+      <ng-container *ngIf="seguros.length > 0; else semSeguro">
+        <div class="clain-row" *ngFor="let seguro of seguros">
+          <div>
+            <strong>Marca: </strong>
+            {{ seguro.marcaCarro }}<br />
+            <strong>Modelo: </strong>
+            {{ seguro.modeloCarro }}
+          </div>
+          <br />
+          <div>
+            <strong>Proprietário: </strong>
+            {{ seguro.nomeProprietario }} {{ seguro.sobrenomeProprietario }}
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <ng-template #carregando>
+      Carregando Seguro...
+    </ng-template>
+
+    <ng-template #semSeguro>
+      Carregando Seguro...
+    </ng-template>
+  </div>
+</div>
