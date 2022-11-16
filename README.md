@@ -20,7 +20,8 @@ acessa pasta "node-seguros" executa comando `ǹpm init -y` para configurar um no
 instala bibliotecas `npm i express`, `npm i body-parser`, `npm i core`
 ou tudo no mesmo comando `npm i express body-parser core`.
 
-
+# Biblioteca para salvar o banco de dados no storage do navegador
+comando `npm install dexie`
 
 
 

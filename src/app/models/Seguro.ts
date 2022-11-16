@@ -1,10 +1,11 @@
 import { MarcaCarro } from './MarcaCarro';
-
 export class Seguro {
-  marcaCarro: string | undefined;
+  id: string | undefined;
+  marcaCarro: MarcaCarro | undefined;
   modeloCarro: string | undefined;
   placaCarro: string | undefined;
   nomeProprietario: string | undefined;
   sobrenomeProprietario: string | undefined;
   dataNascimentoProprietario: string | undefined;
 }
+

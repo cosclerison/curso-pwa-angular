@@ -1,4 +1,3 @@
-import { map } from 'rxjs/operators';
 import { MarcaCarro } from './../../models/MarcaCarro';
 import { Observable } from 'rxjs';
 import { Seguro } from './../../models/Seguro';
@@ -26,6 +25,7 @@ export class CadastroSeguroComponent implements OnInit {
   }
 
   cadastrar() {
+    this.seguro.id = this.seguro.placaCarro;
     this.seguroService.cadastrar(this.seguro);
   }
   adicionar() {}
