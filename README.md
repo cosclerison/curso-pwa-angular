@@ -23,6 +23,11 @@ ou tudo no mesmo comando `npm i express body-parser core`.
 # Biblioteca para salvar o banco de dados no storage do navegador
 comando `npm install dexie`
 
+#   PARA EXECUTAR O SERVIDOR LOCAL 
+digite `node index.js` dentro da pasta do servidor criado "node-seguros"
+o servidor vai rodar e informar o caminho da API
+Servidor rodando em http://localhost:9000
+
 
 
 
